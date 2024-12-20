@@ -163,8 +163,33 @@
 - DROP TABLE table_name - syntax
 - <pre>DROP TABLE student - deletes the student table from the database </pre>
 
-- ALTER TABLE table_name MODIFIER(ADD, etc...) column_name data_type
-- ALTER TABLE table_name DROP COLUMN column_name
+- ALTER TABLE table_name ADD column_name data_type
 - <pre>ALTER TABLE student ADD student_gpa DECIMAL(3,2)</pre>
+
+- ALTER TABLE table_name DROP COLUMN column_name
 - <pre>ALTER TABLE student DROP COLUMN student_gpa</pre>
 
+
+# DAY-3 - 20/12/2024 - Ends at 1 Hour 38 Minutes
+
+# Inserting Data
+
+- <pre>INSERT INTO table_name VALUES(value_1, value_2, value_3);</pre>
+
+- It always fits as per the order of schema what order we created schema same order only we can enter values
+
+- if any value missing we can do the following way
+
+- INSERT INTO student(student_id, student_name) VALUES(2, 'kate'); the missing value will be filled NULL
+
+- You cannot have duplicate entries for primary keys
+
+- IF we want to bulk insert at a time we can follow this
+
+- <pre> INSERT INTO table_name
+        (Column1, Column2, Column3)
+        VALUES 
+        (v1,v2,v3),
+        (v1,v2,v3),
+        (v1,v2,v3);
+    </pre>
